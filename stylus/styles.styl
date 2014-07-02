@@ -1,37 +1,129 @@
+@import "fonts.styl"
 @import "normalize.styl"
-album_name = #333333
-album_author = #818181
+
+
+dark_gray = #333333
+light_gray = #b1b1b1
+med_gray = #818181
+red_wine = #BD255B
+
+a
+	text-decoration none
+.action //buttons
+	color white
+	margin-right 1.2em
+	font-size 1.5em
+	&:last-child
+		margin-right 0em
+	&.gray 
+		color light_gray
+.actions
+	position absolute
+	bottom 0
+	left 0
+	right 0
+	background rgba(black, 0.3)
+
+.author
+	color med_gray
+	height 1.3em
+
 body
-	
 	font-size 16px
+
+.border-bottom
+	border-bottom 1.5px solid light_gray
+.button-menu
+	color dark_gray
+	left .5em
+	margin-top -10px
+	position absolute
+	top 50%
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
+.container
+	font-size 0
+	padding 1.4rem
+	text-align center
 figure
 	margin 0
 
-.container
-	padding 1.4rem
-	font-size 0
-	text-align center
-.name
-	font-family: 'Varela Round', sans-serif
-	color album_name
-
-.author
-	color album_author
-
 .header
-	a 
-		display none
+	
 	height 3.5em
 	.title
 		font-size 1.1em
+		line-height 3.5em
+		margin 0
 		text-align center
+360
+img
+	vertical-align top
+.menu
+	display none
+
+.name
+	color dark_gray
+	font-family 'Varela Round', sans-serif
+	height 1em
+.padding
+	padding 1em
+.padding-tb
+	padding 1.5em 0
+.playing
+	&.small
+		width 22.5em
+.playbox
+	padding 1em
+.progress
+	color med_gray
+	margin 1em 0
+	position relative
+	.min
+	.max
+		font-size 0.8em 
+		position absolute
+		top -5px
+	.min
+		left 0
+	.max
+		right 0
+	.circle
+		background dark_gray
+		border-radius 50%
+		height 10px
+		position absolute
+		right 0
+		top -2px
+		width 10px
+	.state
+		background red_wine
+		border-radius 5px
+		height 5px
+		width 30%
+		position relative
+	.total
+		background light_gray
+		border-radius 5px
+		height 5px
+		margin 0 auto
+		width 75%
+
+	
+
+.relative
+	position relative
+.right-text
+	text-align right
 .song
-	width 8rem
 	display inline-block
 	font-size 1rem
-	margin-right 1em
-	margin-bottom 1em
-	text-align left
+	margin-bottom .5em
+	margin-right .5em
+	text-align center
+	width 14rem
 
 	p 
 		margin .5em 0
