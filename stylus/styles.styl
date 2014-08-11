@@ -5,10 +5,24 @@
 dark_gray = #333333
 light_gray = #b1b1b1
 med_gray = #818181
+ultra_light_gary = #F0F0F0
 red_wine = #BD255B
 
 a
 	text-decoration none
+body
+	font-size 16px
+
+figure
+	margin 0
+img
+	vertical-align top
+p 
+	margin .5em 0
+ul 
+	margin 0
+	padding 0
+
 .action //buttons
 	color white
 	margin-right 1.2em
@@ -28,9 +42,6 @@ a
 	color med_gray
 	height 1.3em
 
-body
-	font-size 16px
-
 .border-bottom
 	border-bottom 1.5px solid light_gray
 .button-menu
@@ -43,13 +54,16 @@ body
 	margin 0 auto
 .center-text
 	text-align center
+.close-icon
+	position absolute
+	top .5em
+	color light_gray
+	right .5em
+	font-size 1.2em
 .container
 	font-size 0
 	padding 1.4rem
 	text-align center
-	background #F5F5F5
-figure
-	margin 0
 
 .header
 	
@@ -59,9 +73,15 @@ figure
 		line-height 3.5em
 		margin 0
 		text-align center
-360
-img
-	vertical-align top
+.input
+	border 1px solid med_gray
+	height 2.5em
+	border-radius 5px
+	padding 0 1em 0 2em
+
+.left
+	float left
+
 .menu
 	display none
 
@@ -119,8 +139,13 @@ img
 
 .relative
 	position relative
+.right 
+	float right
 .right-text
 	text-align right
+.round
+	border-radius 50%
+	overflow hidden
 .song
 	display inline-block
 	font-size 1rem
@@ -129,8 +154,30 @@ img
 	text-align center
 	width 14rem
 
-	p 
-		margin .5em 0
+.search-icon
+	position absolute
+	left 0.5em
+	top  0.8em
+	color light_gray
+
+.username
+	color light_gray
+	position relative
+	top  9px
+	margin-left .5em
+	margin-top 1em
+	
+	&:after
+		content ""
+		border-left 7px solid transparent
+		border-top 7px solid light_gray
+		border-right 9px solid transparent
+		margin-left 0.3em
+		display inline-block
+.wrap
+	width 1000px
+
+
 @media screen and (min-width:320px)
 	.description
 		display none
@@ -149,14 +196,55 @@ img
 		img
 			width 100%
 			height auto
+	.image
+		img
+			width 100%
+			height auto
 @media screen and (min-width:1000px)
+	body
+		background ultra_light_gary
+	.avatar
+		width 38px
+		height 38px
+		margin-top 1em
 
 	.button-menu
 		display none
 	.header
 		height auto
+		border none
 		.title
 			display none
 	.isotipo
 		width 122px
-		
+
+
+	.logo
+		padding 1.3em 0
+		overflow hidden
+		background white
+
+	
+	.menu
+		display block
+		background gris_mas_claro
+		overflow hidden
+		border-top 1px solid gris_claro
+		.item
+			float left
+			list-style none
+			a
+				color gris_oscuro
+				cursor pointer
+				display block
+				padding 1em
+				text-transform uppercase
+				border-top 5px solid transparent
+				transition .3s border-top
+				&:hover
+					border-top 5px solid gris_claro
+	.search
+		margin-right 3em
+		padding 1em
+
+
