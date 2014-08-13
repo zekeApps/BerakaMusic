@@ -7,7 +7,7 @@ light_gray = #b1b1b1
 med_gray = #818181
 ultra_light_gary = #F0F0F0
 red_wine = #BD255B
-
+soundCloud = #d05c85
 a
 	text-decoration none
 body
@@ -183,6 +183,8 @@ ul
 		display none
 	.playbox
 		padding 0
+	.logo
+		display none
 
 @media screen and (min-width:480px)
 	.description
@@ -196,10 +198,7 @@ ul
 		img
 			width 100%
 			height auto
-	.image
-		img
-			width 100%
-			height auto
+	
 @media screen and (min-width:1000px)
 	body
 		background ultra_light_gary
@@ -220,6 +219,7 @@ ul
 
 
 	.logo
+		display flex
 		padding 1.3em 0
 		overflow hidden
 		background white
@@ -234,7 +234,7 @@ ul
 			float left
 			list-style none
 			a
-				color gris_oscuro
+				color dark_gray
 				cursor pointer
 				display block
 				padding 1em
@@ -242,9 +242,9 @@ ul
 				border-top 5px solid transparent
 				transition .3s border-top
 				&:hover
-					border-top 5px solid gris_claro
+					border-top 5px solid soundCloud 
 	.search
-		margin-right 3em
-		padding 1em
+		margin-right 0.2em
+		padding 0.8em
 
 
