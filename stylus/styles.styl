@@ -8,6 +8,7 @@ med_gray = #818181
 ultra_light_gary = #F0F0F0
 red_wine = #BD255B
 soundCloud = #d05c85
+file = #B37088
 a
 	text-decoration none
 body
@@ -25,8 +26,8 @@ ul
 
 .action //buttons
 	color white
-	margin-right 1.2em
-	font-size 1.5em
+	margin-right 0.6em
+	font-size 1em
 	&:last-child
 		margin-right 0em
 	&.gray 
@@ -37,7 +38,11 @@ ul
 	left 0
 	right 0
 	background rgba(black, 0.3)
-
+.audioType
+	color dark_gray
+	font-family 'Varela Round', sans-serif
+	height 1em
+	font-size 1.5em
 .author
 	color med_gray
 	height 1.3em
@@ -64,7 +69,8 @@ ul
 	font-size 0
 	padding 1.4rem
 	text-align center
-
+.file
+	color file
 .header
 	
 	height 3.5em
@@ -81,7 +87,8 @@ ul
 
 .left
 	float left
-
+.list
+	list-style none
 .menu
 	display none
 
@@ -89,6 +96,7 @@ ul
 	color dark_gray
 	font-family 'Varela Round', sans-serif
 	height 1em
+
 .padding
 	padding 1em
 .padding-tb
@@ -97,6 +105,7 @@ ul
 	
 	&.small
 		width 20em
+		margin 0 auto
 	
 		
 .playbox
@@ -146,6 +155,11 @@ ul
 .round
 	border-radius 50%
 	overflow hidden
+.seriesName
+	color light_gray
+	height 1em
+	margin-bottom 1.5em
+	font-size 1.2em
 .song
 	display inline-block
 	font-size 1rem
@@ -153,7 +167,8 @@ ul
 	margin-right .5em
 	text-align center
 	width 14rem
-
+.soundCloud
+	color soundCloud 
 .search-icon
 	position absolute
 	left 0.5em
@@ -174,15 +189,19 @@ ul
 		border-right 9px solid transparent
 		margin-left 0.3em
 		display inline-block
-.wrap
-	width 1000px
+
 
 
 @media screen and (min-width:320px)
 	.description
 		display none
+	.playlist
+		display none
 	.playbox
 		padding 0
+		
+		.progress
+			display none
 	.logo
 		display none
 
@@ -191,9 +210,12 @@ ul
 		display block
 	.playbox
 		padding 1em
+		.progress
+			display block
 	.playing
 		&.medium
 			width auto
+	
 	.primage
 		img
 			width 100%
@@ -252,9 +274,37 @@ ul
 			margin 0 auto
 			width 62.5em
 			overflow hidden
+	.playlist
+		width 23em
+		padding 0 2em
+		border-left 1px solid light_gray
+		display inline-block
+		.list
+			list-style none
+		.item
+			padding 1em 0
+			
 	.search
-		margin-right 0.2em
+		margin-right 2em
 		margin-top 0.8em
+	.wrap
+		width 1000px
 
 
+@media screen and (min-width:1600px)
 
+	.music
+		width 60em
+		float left
+
+	.playing
+		&.ultraLarge
+			margin 0 auto
+			width 100em
+			overflow hidden
+	.playlist
+		width 25em
+	.search
+		margin-right 4em
+	.wrap
+		width 1600px
