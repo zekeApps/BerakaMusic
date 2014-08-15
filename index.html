@@ -7,6 +7,12 @@
 	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
+<script src="audiojs/audio.min.js"></script>
+<script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+</script>
 <body>
 	<header class="header relative border-bottom">
 		<div class="logo border-bottom">
@@ -53,7 +59,7 @@
 			</span>
 		</div>
 	</header>
-	<section class="playing small medium large ultraLarge">
+	<section class="playground small medium large ultraLarge">
 		<div class="music">
 			<figure class="primage relative">
 				<img src="img/album/Liderazgo/liderazgo.jpg" width = "320" height = "320" alt="El liderazgo Cristiano">
@@ -63,18 +69,19 @@
 					<a href="" class="action icon-share"></a>
 				</div>
 			</figure>
-			<div class="playbox">
-				<div class="progress">
-					<span class="min">0:55</span>
-					<div class="total">
-						<div class="state">
-							<div class="circle">
-								
-							</div>
-						</div>
-					</div>
-					<span class="max">4:01</span>
-				</div>
+			<div class="audiojs">
+				<audio preload = "auto">
+					<source src="turbo.MP3"
+				</audio>
+			</div>
+			<div class="controls">
+				<p class="play"></p>
+				<p class="pause"></p>
+				<p class="loading"></p>
+				<p class="error"></p>
+			</div>
+			<div class="description">
+
 				<div class="description center-text border-bottom">
 					<p class="name">
 						El Liderazgo Cristiano
@@ -83,13 +90,7 @@
 						Azael de la Garza
 					</p>
 				</div>
-				<div class="play center-text padding-tb">
-					<a href="" class="action gray icon-prev"></a>
-					<a href="" class="action gray icon-play"></a>
-					<a href="" class="action gray icon-next"></a>
-					<a href="" class="action gray icon-random"></a>
-					<a href="" class="action gray icon-vol"></a>
-				</div>
+
 			</div>
 		</div>
 		<div class="playlist right">
@@ -139,7 +140,8 @@
 		</div>
 		
 	</section>
-	<section class="container">
+	<section class="container border-bottom">
+
 		<article class="song">
 			<figure class="image">
 				<img src="img/album/Doctrinas/bible.jpg" width = "128" height = "128" alt="Estudio de Doctrinas">
@@ -225,5 +227,8 @@
 			</p>
 		</article>
 	</section>
+	<div class="pageFooter">
+		
+	</div>
 </body>
 </html>

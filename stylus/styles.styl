@@ -9,6 +9,7 @@ ultra_light_gary = #F0F0F0
 red_wine = #BD255B
 soundCloud = #d05c85
 file = #B37088
+footer =#d05c85
 a
 	text-decoration none
 body
@@ -23,7 +24,19 @@ p
 ul 
 	margin 0
 	padding 0
-
+.audiojs
+	width auto
+	
+	.play
+		background url("../audiojs/player-graphics.gif")
+		background-position-x -2px
+		background-position-y -1px 
+		
+	.pause
+		background url("../audiojs/player-graphics.gif")
+		background-position-x -2px
+		background-position-y -91px 
+		
 .action //buttons
 	color white
 	margin-right 0.6em
@@ -67,7 +80,7 @@ ul
 	font-size 1.2em
 .container
 	font-size 0
-	padding 1.4rem
+	padding 7rem
 	text-align center
 .file
 	color file
@@ -101,15 +114,17 @@ ul
 	padding 1em
 .padding-tb
 	padding 1.5em 0
-.playing
+.playground
 	
 	&.small
 		width 20em
 		margin 0 auto
+		margin-top 2em
 	
 		
 .playbox
 	padding 1em
+	display none
 .progress
 	color med_gray
 	margin 1em 0
@@ -199,6 +214,7 @@ ul
 		display none
 	.playbox
 		padding 0
+	
 		
 		.progress
 			display none
@@ -212,9 +228,10 @@ ul
 		padding 1em
 		.progress
 			display block
-	.playing
+	.playground
 		&.medium
 			width auto
+			margin-top 0
 	
 	.primage
 		img
@@ -242,7 +259,7 @@ ul
 
 	.logo
 		display flex
-		padding 1.3em 0
+		padding 2em 0
 		overflow hidden
 		background white
 
@@ -269,9 +286,9 @@ ul
 		width 32.5em
 		float left
 
-	.playing
+	.playground
 		&.large
-			margin 0 auto
+			margin-top 2em
 			width 62.5em
 			overflow hidden
 	.playlist
@@ -294,10 +311,10 @@ ul
 @media screen and (min-width:1600px)
 
 	.music
-		width 60em
+		width 68em
 		float left
 
-	.playing
+	.playground
 		&.ultraLarge
 			margin 0 auto
 			width 100em
@@ -308,3 +325,6 @@ ul
 		margin-right 4em
 	.wrap
 		width 1600px
+	.pageFooter
+		height 15em
+		background white
