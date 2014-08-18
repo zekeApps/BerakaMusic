@@ -36,8 +36,13 @@ ul
 		background url("../audiojs/player-graphics.gif")
 		background-position-x -2px
 		background-position-y -91px 
+	.progress
+		margin 0
+	
 	.time
 		float right	
+		.played
+			color white
 .action //buttons
 	color white
 	margin-right 0.6em
@@ -81,8 +86,8 @@ ul
 	font-size 1.2em
 .container
 	font-size 0
-	padding 7rem
 	text-align center
+	margin-top 10rem
 .file
 	color file
 .header
@@ -115,52 +120,14 @@ ul
 	padding 1em
 .padding-tb
 	padding 1.5em 0
-.playground
-	
-	&.small
-		width 20em
-		margin 0 auto
-		margin-top 2em
+
+		
 	
 		
 .playbox
 	padding 1em
 	display none
-.progress
-	color med_gray
-	margin 1em 0
-	position relative
-	.min
-	.max
-		font-size 0.8em 
-		position absolute
-		top -5px
-	.min
-		left 0
-	.max
-		right 0
-	.circle
-		background dark_gray
-		border-radius 50%
-		height 10px
-		position absolute
-		right 0
-		top -2px
-		width 10px
-	.state
-		background red_wine
-		border-radius 5px
-		height 5px
-		width 30%
-		position relative
-	.total
-		background light_gray
-		border-radius 5px
-		height 5px
-		margin 0 auto
-		width 75%
 
-	
 
 .relative
 	position relative
@@ -208,23 +175,35 @@ ul
 
 
 
-@media screen and (min-width:320px)
+@media screen and (min-width:200px)
+	.audiojs
+		.scrubber
+			width 200px
 	.description
 		display none
 	.playlist
 		display none
 	.playbox
 		padding 0
-	
-		
-		.progress
-			display none
+	.playground
+		&.small
+			width auto
+			margin 0 auto
+	.primage
+		img
+			width 100%
+			height auto
 	.logo
 		display none
 
 @media screen and (min-width:480px)
+	.audiojs
+		.scrubber
+			width 300px
 	.description
 		display block
+		margin-top 2em
+
 	.playbox
 		padding 1em
 		.progress
@@ -238,10 +217,22 @@ ul
 		img
 			width 100%
 			height auto
-	
+@media screen and (min-width:640px)
+	.audiojs
+		.scrubber
+			width 460px
+
+
+@media screen and (min-width:768px)
+	.audiojs
+		.scrubber
+			width 580px
 @media screen and (min-width:1000px)
 	body
 		background ultra_light_gray
+	.audiojs
+		.scrubber
+			width 356px
 	.avatar
 		width 38px
 		height 38px
@@ -310,7 +301,9 @@ ul
 
 
 @media screen and (min-width:1600px)
-
+	.audiojs
+		.scrubber
+			width 924px
 	.music
 		width 68em
 		float left
