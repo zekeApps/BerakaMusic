@@ -1,11 +1,13 @@
 var http = require('http'),
-	st = require('node-static'),
-	opts = { cache: false }, 
-	file = new st.Server('./', opts),
-	port = process.env.PORT || 8081;
+    st = require('node-static'),
+    opts = {
+        cache: false
+    },
+    file = new st.Server('./', opts),
+    port = process.env.PORT || 8081;
 
-http.createServer(function(req, res){
-file.serve(req, res);
+http.createServer(function(req, res) {
+    file.serve(req, res);
 
 }).listen(port);
 

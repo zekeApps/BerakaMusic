@@ -1,17 +1,31 @@
 Beraka = {};
 
 Beraka.Song = Backbone.Model.extend({});
+Beraka.Songs = Backbone.Collection.extend({
+    model: Backbone.Song
+});
 Beraka.SongView = Backbone.View.extend({
-	tagName: 'li',
-	className: 'item border-bottom',
+    events: {
+        'click .action.icon-add': 'add'
+    },
+    tagName: 'li',
+    className: "item border-bottom",
+    template: Handlebars.compile($("#song-template").html()),
 
-	render: function(){
-		var song = this.model;
-		var name = song.get('name');
-		var author = song.get('author');
+    initialize: function() {
+        this.listenTo(this.model, "change", this.render, this);
+    },
 
-		this.$el.html("<span>"+ author + "</span> - <span>" + name + "</span>");
-	}
+
+    render: function() {
+        var html = this.template(this.model.toJSON());
+        this.$el.html(html);
+    },
+
+    add: function(e) {
+        alert(this.model.get("name"));
+    }
+    
 });
 
 window.Beraka = Beraka;
