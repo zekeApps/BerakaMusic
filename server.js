@@ -4,7 +4,7 @@ var http = require('http'),
         cache: false
     },
     file = new st.Server('./', opts),
-    port = process.env.PORT || 8081;
+    port = process.env.PORT || 8082;
 
 http.createServer(function(req, res) {
     file.serve(req, res);
